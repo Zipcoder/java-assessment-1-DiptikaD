@@ -11,7 +11,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+       String[] words = sentence.split(" ");
+        return words;
     }
 
 
@@ -21,7 +22,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] words = getWords(sentence);
+
+        return words[0];
     }
 
     /**
@@ -30,7 +33,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String[] words = getWords(sentence);
+        String firstWord = words[0];
+        StringBuilder wordSB = new StringBuilder(firstWord);
+        StringBuilder revWordSB =  wordSB.reverse();
+
+        return revWordSB.toString();
     }
 
     /**
@@ -39,7 +47,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String revvedFirstWord = reverseFirstWord(sentence);
+
+        String subString1 = revvedFirstWord.substring(0,1);
+        String subString2 = revvedFirstWord.substring(1,revvedFirstWord.length());
+        String subStringCap = subString1.toUpperCase();
+
+        return subStringCap+subString2;
     }
 
 
@@ -50,7 +64,10 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        StringBuilder removedChar = new StringBuilder(str);
+        removedChar = removedChar.deleteCharAt(index);
+
+        return removedChar.toString();
     }
 
 }
