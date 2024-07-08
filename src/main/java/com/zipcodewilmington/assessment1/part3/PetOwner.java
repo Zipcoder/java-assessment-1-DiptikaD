@@ -58,7 +58,8 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-       if(name.contains((CharSequence) pet)){
+
+        if(name.contains((CharSequence) pet)){
            return true;
        } else{
         return false;
