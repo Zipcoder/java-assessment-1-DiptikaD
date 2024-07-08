@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment1.part3;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by leon on 2/16/18.
@@ -94,20 +95,20 @@ public class PetOwner {
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+        return pets.length;
     }
 
     /**
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return name;
     }
 
     /**
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
-        return null;
+        return pets;
     }
 }
